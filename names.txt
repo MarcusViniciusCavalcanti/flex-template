@@ -1,0 +1,4 @@
+directivas = app
+componentes = flex-app
+class-css = flex
+@input = flex

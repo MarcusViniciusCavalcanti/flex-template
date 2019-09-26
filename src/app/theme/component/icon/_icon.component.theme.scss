@@ -1,0 +1,19 @@
+@mixin nb-icon-theme() {
+  app-flex-icon {
+    font-size: nb-theme(icon-font-size);
+    line-height: nb-theme(icon-line-height);
+    width: nb-theme(icon-width);
+    height: nb-theme(icon-height);
+  }
+
+  app-flex-icon svg {
+    vertical-align: nb-theme(icon-svg-vertical-align);
+  }
+
+  @each $status in nb-get-statuses() {
+    app-flex-icon.status-#{$status} {
+      color: nb-theme(icon-#{$status}-color);
+    }
+  }
+}
+

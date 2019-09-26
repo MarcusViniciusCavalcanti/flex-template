@@ -1,0 +1,9 @@
+@import '../../styles/css/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '../../../../../style/global/breakpoints';
+
+@include nb-install-component() {
+  .menu-sidebar ::ng-deep .scrollable {
+    padding-top: nb-theme(layout-padding-top);
+  }
+}

@@ -9,7 +9,7 @@ import { Component, Input, HostBinding } from '@angular/core';
       <ng-content select="app-flex-card-back"></ng-content>
     </div>
     <a *ngIf="showToggleButton" class="reveal-button" (click)="toggle()">
-      <nb-icon icon="chevron-down-outline" pack="nebular-essentials" aria-hidden="true"></nb-icon>
+      <app-flex-icon icon="chevron-down-outline" pack="nebular-essentials" aria-hidden="true"></app-flex-icon>
     </a>
   `,
 })

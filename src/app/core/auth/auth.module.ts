@@ -45,6 +45,7 @@ import { FlexRegisterComponent } from './components/register/register.component'
 import { FlexRequestPasswordComponent } from './components/request-password/request-password.component';
 import { FlexResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { FlexAuthComponent } from './components/auth.component';
+import { FlexLogoutComponent } from './components/logout/logout.component';
 
 export function strategiesFactory(options: FlexAuthOptions, injector: Injector): FlexAuthStrategy[] {
   const strategies = [];
@@ -78,7 +79,7 @@ export function nbNoOpInterceptorFilter(req: HttpRequest<any>): boolean {
 const AUTH_COMPONENTS = [
   FlexAuthBlockComponent,
   FlexLoginComponent,
-  FlexLoginComponent,
+  FlexLogoutComponent,
   FlexRegisterComponent,
   FlexRequestPasswordComponent,
   FlexResetPasswordComponent,

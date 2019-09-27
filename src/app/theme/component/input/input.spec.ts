@@ -1,51 +1,45 @@
-/**
- * @license
- * Copyright Akveo. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
- */
-
-import { Component, Input } from '@angular/core'
+import { Component, Input } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NbInputDirective } from '@nebular/theme';
 import { By } from '@angular/platform-browser';
-import { NbComponentStatus } from '../component-status';
-import { NbComponentSize } from '../component-size';
-import { NbComponentShape } from '../component-shape';
-import { NbInputModule } from './input.module';
+import { FlexComponentStatus } from '../component-status';
+import { FlexComponentSize } from '../component-size';
+import { FlexComponentShape } from '../component-shape';
+import { FlexInputModule } from './input.module';
+import { FlexInputDirective } from './input.directive';
 
 @Component({
   template: `
-    <input #inputEl nbInput [fieldSize]="size" [status]="status" [shape]="shape" [fullWidth]="fullWidth">
-    <textarea #textareaEl nbInput [fieldSize]="size" [status]="status" [shape]="shape" [fullWidth]="fullWidth">
+    <input #inputEl appInput [fieldSize]="size" [status]="status" [shape]="shape" [fullWidth]="fullWidth">
+    <textarea #textareaEl appInput [fieldSize]="size" [status]="status" [shape]="shape" [fullWidth]="fullWidth">
     </textarea>
   `,
 })
 class InputTestComponent {
-  @Input() size: NbComponentSize;
-  @Input() status: NbComponentStatus;
-  @Input() shape: NbComponentShape;
+  @Input() size: FlexComponentSize;
+  @Input() status: FlexComponentStatus;
+  @Input() shape: FlexComponentShape;
   @Input() fullWidth = false;
 }
 
-describe('Directive: NbInput', () => {
+describe('Directive: FlexInput', () => {
 
   let inputTestComponent: InputTestComponent;
   let fixture: ComponentFixture<InputTestComponent>;
   let inputElement: Element;
   let textareaElement: Element;
-  let inputDirective: NbInputDirective;
+  let inputDirective: FlexInputDirective;
 
   beforeEach(() => {
 
     fixture = TestBed.configureTestingModule({
-        imports: [ NbInputModule ],
+        imports: [ FlexInputModule ],
         declarations: [ InputTestComponent ],
       })
       .createComponent(InputTestComponent);
 
     inputTestComponent = fixture.componentInstance;
 
-    inputDirective = fixture.debugElement.query(By.directive(NbInputDirective)).componentInstance;
+    inputDirective = fixture.debugElement.query(By.directive(FlexInputDirective)).componentInstance;
     inputElement = fixture.debugElement.query(By.css('textarea')).nativeElement;
     textareaElement = fixture.debugElement.query(By.css('input')).nativeElement;
   });
@@ -81,5 +75,4 @@ describe('Directive: NbInput', () => {
     expect(inputElement.classList).toContain('input-full-width');
     expect(textareaElement.classList).toContain('input-full-width');
   });
-
 });

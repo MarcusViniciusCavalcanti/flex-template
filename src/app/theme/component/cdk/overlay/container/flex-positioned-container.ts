@@ -1,5 +1,5 @@
 import { HostBinding, Input } from '@angular/core';
-import { FlexPosition } from '../position/overlay-position';
+import { FlexPosition } from '../position/flex-position';
 
 export abstract class FlexPositionedContainer {
   @Input() position: FlexPosition;

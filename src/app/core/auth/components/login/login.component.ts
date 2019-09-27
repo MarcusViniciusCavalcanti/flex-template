@@ -5,6 +5,7 @@ import { getDeepFromObject } from '../../helpers';
 
 import { FlexAuthService } from '../../services/auth.service';
 import { FlexAuthResult } from '../../services/auth-result';
+import { AuthUser } from '../../models/user';
 
 @Component({
   selector: 'app-flex-login',
@@ -19,7 +20,7 @@ export class FlexLoginComponent {
 
   errors: string[] = [];
   messages: string[] = [];
-  user: any = {};
+  user: AuthUser = {};
   submitted = false;
   socialLinks: FlexAuthSocialLink[] = [];
   rememberMe = false;

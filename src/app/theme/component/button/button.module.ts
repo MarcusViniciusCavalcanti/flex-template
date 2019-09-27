@@ -13,4 +13,4 @@ import { FlexButtonComponent } from './button.component';
     FlexButtonComponent
   ],
 })
-export class NbButtonModule { }
+export class FlexButtonModule { }

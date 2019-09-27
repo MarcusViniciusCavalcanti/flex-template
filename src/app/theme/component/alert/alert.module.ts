@@ -15,5 +15,5 @@ import { FlexAlertComponent } from './alert.component';
     FlexAlertComponent,
   ],
 })
-export class NbAlertModule {
+export class FlexAlertModule {
 }

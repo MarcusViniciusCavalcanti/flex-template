@@ -3,11 +3,13 @@
 @import "themes";
 
 @import "../../../../../style/globals";
+@import "../../../auth/styles/all";
 
 @import '../../../../../../node_modules/bootstrap/scss/functions';
 @import '../../../../../../node_modules/bootstrap/scss/variables';
 @import '../../../../../../node_modules/bootstrap/scss/mixins';
 @import '../../../../../../node_modules/bootstrap/scss/grid';
+
 
 @import "layout";
 @import "overrides";

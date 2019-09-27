@@ -1,0 +1,16 @@
+@mixin nb-auth-block-theme() {
+  app-flex-auth-block {
+    .text-link {
+      color: nb-theme(text-hint-color);
+    }
+
+    .forgot-password {
+      color: nb-theme(text-disabled-color);
+    }
+
+    .socials a {
+      color: nb-theme(text-hint-color);
+    }
+  }
+}
+

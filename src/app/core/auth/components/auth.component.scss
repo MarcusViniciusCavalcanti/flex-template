@@ -1,0 +1,50 @@
+@import '../../../../style/global/breakpoints';
+
+:host {
+  $auth-layout-padding: 2.5rem;
+
+  app-flex-card {
+    margin: 0;
+    height: calc(100vh - 2 * #{$auth-layout-padding});
+  }
+
+  .navigation .link {
+    display: inline-block;
+    text-decoration: none;
+
+    app-flex-icon {
+      font-size: 2rem;
+      vertical-align: middle;
+    }
+  }
+
+  .links app-flex-icon {
+    font-size: 2.5rem;
+  }
+
+  app-flex-card-body {
+    display: flex;
+    width: 100%;
+  }
+
+  app-flex-auth-block {
+    margin: auto;
+  }
+
+  @include media-breakpoint-down(sm) {
+    app-flex-card {
+      border-radius: 0;
+      height: 100vh;
+    }
+  }
+
+  ::ng-deep {
+    app-flex-layout .layout .layout-container .content .columns app-flex-layout-column {
+      padding: $auth-layout-padding;
+
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+      }
+    }
+  }
+}

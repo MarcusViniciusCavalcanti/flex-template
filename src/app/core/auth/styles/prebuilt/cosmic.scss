@@ -1,0 +1,8 @@
+@import '../../../../../style/all';
+@import '../all';
+
+$nb-enabled-themes: (cosmic);
+
+@include nb-install() {
+  @include nb-auth-global();
+};

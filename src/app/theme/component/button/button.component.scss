@@ -1,0 +1,39 @@
+@import '../../../../style/core/mixins';
+
+:host {
+  appearance: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+
+  ::ng-deep app-flex-icon {
+    vertical-align: top;
+  }
+
+  &.icon-start:not(.icon-end) ::ng-deep app-flex-icon {
+    @include nb-ltr(margin-right, 0.75rem);
+    @include nb-rtl(margin-left, 0.75rem);
+  }
+
+  &.icon-end:not(.icon-start) ::ng-deep app-flex-icon {
+    @include nb-ltr(margin-left, 0.75rem);
+    @include nb-rtl(margin-right, 0.75rem);
+  }
+}
+
+:host(.transitions) {
+  @include nb-component-animation(background-color, border-color, box-shadow, color);
+}
